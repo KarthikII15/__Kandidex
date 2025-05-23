@@ -1,0 +1,13 @@
+To access the interface :
+You need node in the local system
+Go to the location in termainal 
+
+>>> npm install
+
+to run the model (backend):
+
+install ollama 
+pull llama3:8b using ollama
+go to the file location where app.py exists, run
+
+>>> python app.py

@@ -1,0 +1,277 @@
+Speaker 1  0:03
+Okay, so, yeah, hi, Vikram, yeah, yeah, hi, Ramana, how are you doing today? Doing good. How about you? Yeah, all good here, yeah, great, great. Okay, Vikram, yeah, so, yeah, could you please, uh, briefly about your experiences, yeah.
+
+Speaker 2  0:23
+So like, I have total 11 years of experience as a data engineer, okay? I have expertise in, like, designing, building and maintaining these large data scale pipelines. So technology is using here, the Python, like, data processing stores, AWS, Azure, GCP, I'm using as a cloud platforms like I have collaborated with multiple stakeholders to define their data strategies and roadmaps to define these pipelines. I have worked in both agile and waterfall environments, if we talk about experience, and in AWS services, I have worked with EC two, s3 EMR, rds, VPC, okay, redshift, DynamoDB. So multiple I have worked, if we talk about Hadoop like, I have worked with cloud era, Amazon, EMR, Azure, HD, insights and like, Hortonworks also. So like, I have experience working with all major cloud environments here. So, like, it's I have also experiences on Power BI and this tableau for visualization, things that it's my total experience which I'm having.
+
+Speaker 1  1:31
+Great. So that's great. So like, how can you rate yourself on SQL side, Vikram, like, out of file,
+
+Speaker 2  1:38
+out of file. If you say, like, I'm doing SQL for last 10 years. So like, I say not and 4.5 I would rate because every time there is some curve for learning, I will not say five, but like, 4.5 I can rate myself
+
+Speaker 1  1:54
+for that. Oh, that's great. Really, great. And Python side, how strong are you? Python
+
+Speaker 2  1:58
+also, like, I am working for seven, eight years. I am writing lots of code in Python also. So, 4445, is like a good to analyze.
+
+Speaker 1  2:07
+Okay, okay, and on the BAe reporting rules, right? Like, what are the like you worked on Tableau, power? Ba right. So I have,
+
+Speaker 2  2:15
+like, these six years, like, I've worked on major three, these visualization tools I have worked on, Power BI Tableau and click View. Also, is there one of this visualization tool which I have worked on?
+
+Speaker 1  2:27
+Okay, okay. Have you got like, yeah, exposure to look into? Have you got an exposure to look into other ba tools like GCP side, look yeah,
+
+Speaker 2  2:36
+GCP side Looker like, I have got to use it develop some POC. But like for any major production, I have not created, but like for exploring, creating some POC for clients, I have worked on, then I have worked on, like, manual also, like, totally development using the chart.js we have also developed these dashboards and different visualizations. So, like, it's all major tools I have worked on.
+
+Speaker 1  3:06
+Like, what are the key challenges you face, and what are the, you know, recommendations from your side, right, your experience, like, on the these fronts, right
+
+Unknown Speaker  3:14
+on the
+
+Unknown Speaker  3:16
+visualization, on
+
+Speaker 1  3:17
+the visualizations, like, yeah, what are the key you know, you know, like, there may be, you know, challenges with, like, performance or some kind of, you know, data isn't missing, like, so you might have, you know, handle with your, you know, 11 years of experience, right? So what are the different situation? You how, you know, based on, how did you handle them? Okay? So,
+
+Speaker 2  3:41
+like, if we talk about the key challenges, okay, like, one of the major key challenges I have faced here is this poor data quality, okay, like, there is lot of inconsistent missing or, like runners data is there, which can lead to our this misleading visualizations. One of this biggest thing which I have faced, okay, for this, like, if we talk about the solution, so, like, we have implemented, like, data cleaning using either this pandas or for Power BI, using this Power BI, Power Query, okay? Like we have then standardized these data formats and validated data like these data sources before doing any visualization. Then next challenge we face is choosing the correct visualization for the data. Like, sometimes a chart can totally change the story in that data is telling. So choosing that correct visualization is one of like, very it is very important aspect, like, for line chart, for trends over time, we should be using line charts. Then for any comparison, we should use these bar charts. So we have created a one list there. Like, if this type of data is there, then this kind of visualization charts we will use, like for any. Relationship between variables we were using the scatter plots there. Then, if we talk about other one, then like other one is we overlook too much information on these dashboards, like we make it so much complex, like, which confuse the users which to look and which to not look. So there needs to be a proper strategy, like what we need to give. So, like we should be following, like, whatever we are giving is less, but the information which that user is getting is more. So like, we sometimes use this summarization and like aggregation and filters to give the in visualization, we can have this hierarchical drill down to show detailed view. Then another thing, big point, handling large data sites like sometimes you visualize millions of data points on a dashboard so which can slow our performance. Okay, so we should be using this sampling, sampling technique to limit this displayed data. We should implement this aggregation and pre computed summary so that the data processing should be less and our dashboard should be fast, then we should leverage, like Apache superset, also for this, leveraging these big data there in our dashboards. Okay,
+
+Speaker 1  6:31
+great, great. And have you used any kind of a custom widgets, you know, you know, dashboarding,
+
+Speaker 2  6:38
+yeah. So, like, if we talk about custom widgets, okay, so, like, I told you, we have created a custom dashboards using these chart JS library, okay, but like, if we talk, we have this custom widget in Power BI, which we have, like, imported and used in our Power BI, okay, okay. Cream,
+
+Speaker 1  7:03
+personally, like, how do you generally like, like, let's say the dashboard is taking, you know, kind of a very longer time, and you got a request from the business side, right? So that needs to be, you know, improvise and optimize the the, you know, the performance. How do you deal that kind of situation? Bucha, uh, vision,
+
+Speaker 2  7:23
+like, dashboard is running slow, and how we will optimize the performance, that's right. Okay. So, like, if this is the case, we should first be seeing, like, now, what kind of data is there? Okay? Like, we should first be optimizing our data model. If we talk about Power BI, okay, we should be, like, optimizing our this data model, like we should reduce data volume, like we should remove unused columns from there we should be using more aggregations in SQL or in like, power way aggregation, then we should be filtering that data, like using this query reduction technique in Power BI we should be using this filter data, and we should also disable like this auto date time thing. Then we should be using star schema instead of this snowflake schema there in our dashboard, we should also avoid this relationship, like we should avoid many to many relationship which are slower as compared to one to one. We should then reduce cardinality, like we should be using integer instead of the string base for joins. We should focus more on group characterization data whenever it is possible. So these are some of the steps we can take. It here. Okay, that's great. And then
+
+Unknown Speaker  8:49
+we can use catches or Q
+
+Speaker 2  8:52
+we can use character indexes right correct data on the database front, like, indexes we can implement on database front, whatever filters we are using, same indexes we can use so our query will be more faster for us. Good, good, good. That's great.
+
+Unknown Speaker  9:14
+Yeah, and
+
+Speaker 1  9:15
+like, okay, when it comes to the SQL side, right? So you said, like you are very good, right? But in, in which scenarios do you use common table expressions and like, when it compares to the temporary tables, right? So there and we which are similarity you prefer either
+
+Unknown Speaker  9:35
+common table expression and the temporary tables,
+
+Speaker 2  9:39
+common table expression and like, temporarily table. So like, mainly we use temporary table when we don't have that data needs to be like, like, whenever we need to manage this intermediate result in the SQL queries. Okay. If we talk about common table operation, then mainly it is a it is a result set that last only for a duration of a query. Okay, like it? It? We use it when, like whenever we are using for hierarchical data like employee manager relationship or any organization structure, etc. There we should be using this, the these, these common table expressions. Whereas if we talk about temporary table, so it is a real table stored in that database, so it is a temporary storage, and we and can be accessed multiple times in a session, mainly so like we should be using it like when we will. We are storing that intermediate result for like you reuse across multiple queries. Then we should be creating these temporary tables there align the like reuse of that data in our multiple queries.
+
+Speaker 1  11:03
+Okay, that's fine, great, okay. And like, do you know this? Explain plan and query plan, yeah, when do you Yeah? Could you please brief something like, When do you go with that kind of, you know, when to use this, yeah? Like, explain plan, when, do you really need to use that kind of, you know, feature, explain plan and, yeah, okay, like,
+
+Speaker 2  11:25
+like, whenever we work with the SQL queries, okay, mainly in large data sets, okay, wherever this performance optimization is crucial, like, my queries are running slow, or some performance issues there. So at that time, these explain plan and this query plan are essential to understand how these queries are executed and like, what are our identifying potential optimizations we can do here. Okay, so like this, explain plan, provide us the execution strategy like the SQL engine plans to use when running a query, it does not execute the query, but shows how the database will process it, like it will help to understand how tables are accessed, like full table scan is happening, or index scan or join method. It will show us the join order or a filter condition and aggregation how it is happening. It identifies slow operation, like full table scans and suggest any indexing. Then it improve joint performance by ensuring correct that correct joint types are there. Okay, so like we before we run any expensive query, like we use explain plan so that will consume a lot of resources there, okay, and if we talk about the key components in this explained plan output, then we have this. First one is table access, full, index scan is there? Hash join, is there. Then next loop, join, then sort merge, join. These are some of the outputs we get in this explain plan. If we talk about query plan, then the query plan is the actual execution path used by the database engine while executing that query. So unlike this, explain plan, which predict execution, the query plan shows what actually happened when we rendered query.
+
+Unknown Speaker  13:29
+Great, yeah, that's really, yeah, great.
+
+Speaker 1  13:30
+And have you worked on this kind of, you know, the window functions in SQL? Like, what are the different kind of functions, and when do you use that
+
+Speaker 2  13:39
+window function. Yeah. So mainly window functions are like, like. These are analytics function that allows calculation across a set of table rows related to the current row, like, without collapsing the result set like, unlike, group by which aggregates data and reduces the number of rows. Window Function retains the original rows by adding competitive values to it, okay? So like, like when we need the running total or any cumulative sums, then we can use this running total, okay? Or, like, whenever we need ranking, then we can use this window function, or any moving average first value, last value in a partition. So at these times, we can use these window functions.
+
+Speaker 1  14:31
+Okay, okay. Have you heard about this, uh, DENSE RANK and right rank, correct?
+
+Speaker 2  14:42
+So mainly dance. So mainly dance. Dance rank is, is a window function in a SQL which we use to assign rank to rows, okay, rows within a partition. Unlike rank, it does not skip rank number when duplicate. Well. You exist.
+
+Unknown Speaker  15:02
+Okay, and what about row number?
+
+Speaker 1  15:06
+Sorry, like whatever row number, row number is also one of the right, yeah, yeah.
+
+Unknown Speaker  15:10
+Row number, correct. So, mainly,
+
+Speaker 2  15:15
+sorry, so mainly row number is a row number is like a window function, which is used to assign a unique, sequential number to each row in a result set. So it does not handle duplicate the same way rank or DENSE RANK, it simply assigns an increasing integer to each row. Okay?
+
+Speaker 1  15:45
+Yeah, okay, got it, yeah, got it, yeah. Have you heard about, like, have you used correlated sub queries, correct, yeah,
+
+Speaker 2  15:56
+queries and sub queries, if we talk about like, like a query is
+
+Speaker 1  16:01
+I'm asking about correlated sub query, sorry,
+
+Speaker 2  16:05
+correlated sub query, sorry, sorry, I missed with query.
+
+Unknown Speaker  16:08
+No problem at all. No problem at all.
+
+Speaker 2  16:17
+Just give me a minute. I just, yeah, yeah, sorry. So like a correlated sub query is a type of sub query where the inner query depends on the value from the outer query. Like, unlike a regular sub query, which runs independently, oh, sorry, a correlated sub query execute once for each row processed by our outer query. Like, if we say like, the inner query, reference is a column from outer query, and it execute once per row in the outer query, okay, typically, we use it in filters, like where clause or in calculation Select Call, or in aggregations, yeah,
+
+Unknown Speaker  17:15
+yeah, I think I'm correct. Like, not,
+
+Speaker 1  17:18
+yeah, fine, fine. But like, if I want to find out the the fifth highest salary from the employee table, like, how can you write the query?
+
+Speaker 2  17:28
+I If we want to find a fifth, yeah, fifth highest salary,
+
+Unknown Speaker  17:35
+Okay, should I write the program
+
+Speaker 1  17:36
+in? No, no. Just, you know, no need to write anything. Just, you know, how, the SQ look like. Just give me a
+
+Speaker 2  17:43
+Okay, okay, so like, if we want to find it, then mainly what we will do first we we will create a query where, where we will be having our SELECT statement first, where we will use limit and offset, okay, okay, one way is like we should be writing that SELECT DISTINCT salary from employees, order by salary, and we will limit one, and we will do offset four. So this is the easiest way we can find it. And if we want to use rank function here, then we should be using it like SELECT salary, and then from then, there we will say, select salary, then rank function in it we will say over order by salary as rank from employee. Okay, we will find the rank, rank salaries. And there we will say that rank is equal to five, so we will get the fifth highest salary from there,
+
+Unknown Speaker  18:41
+okay, like, there are multiple ways we can use rank.
+
+Speaker 2  18:45
+We can we can use dance rank also here, if we want. So, like, there can be multiple ways we can have it, except, very, very distinct. Also we can use to get it. Then self join is also there, where we can get these results. So multiple ways are there, whichever we see good, we can use it.
+
+Speaker 1  19:07
+Yeah, true, right, right, yeah, right, okay, and yeah. How do we display to duplicate records in a table? Like having an employee table, I want to display all the duplicate records data. How do you do that? Like,
+
+Speaker 2  19:21
+if we want to, like, display all the duplicate roads. So what we will do, we will find those orders in a table, like, where duplicate rows are, like, select star from employee, where employee ID, name, salary, increment in. Then again, we will write it in. In clause, we will say, select the same four columns from employees, group by these four columns, having count star greater than one. So what it will do, it will group records by all columns. So using this having count star greater than one. In to find duplicates and retrieves only the rows that appears more than once.
+
+Speaker 1  20:06
+Okay, okay, great, great, great. Like, on the Python side, how good are you? Like, can you you, did you use kind of all these, you know, importing the libraries Matt Bradley, then other like, yeah.
+
+Speaker 2  20:19
+Like, multiple projects I have done, I have created some dashboards also in Python, using Pandas, like we used in every day to day life. Okay, so, like, I say four to 4.5
+
+Speaker 1  20:32
+How do you create the dashboards? Using Python? Can you explain the process? Let's say, yeah.
+
+Speaker 2  20:39
+Okay. Using APA, yeah. Good, yeah. So, so, like, what we do, like that, there is a use case where, like, using this library framework, like streamlet is there and dash is there, okay. So using streamlet, which help us to create a interactive dashboards. So what we have done, we have imported the data, and using this streamlet libraries and using panda to formulate the data, we created this interactive dashboard there.
+
+Unknown Speaker  21:15
+Yeah, where did you create? You created in Power BI Tableau,
+
+Speaker 2  21:17
+not Power BI Tableau. It is a separate other than this power way table like a custom without using any visualization tool. Okay? You created, okay, we have created our own dashboard, like with there no need to use any Tableau or power way it is a custom. Is it kind of a UA pace user
+
+Speaker 1  21:35
+interface, how art in the kind of a collab or something like, how where exactly like, you know, creating this kind of dashboard is, are you using any kind of user interface?
+
+Speaker 2  21:49
+Yeah, that is on our local only, like our internal rate was already developed which we were using,
+
+Speaker 1  21:54
+okay, no, my, my only question is, right, how do you deploy into different pages, and how do you manage the the version controlling, right? If you can create this kind of dashboards, yeah,
+
+Speaker 2  22:06
+it is. So we were using get there to manage this version control there, okay, for all the updates and anything we will be using get on a release this version update, and everything is there, and it is a simple, single page dashboards where six charts were there, okay, it was for like a POC of a thing, because some costing issue was coming where, like, a dashboard needs to be given a large number of peoples. But due to like that licensing cost, there was a requirement from like, if we can simply create a simple dashboard, because five six charts were there, no complex COVID, nothing is there. So if that can be done, then a big costing can be saved. So for which we have created this dashboard.
+
+Unknown Speaker  22:53
+Okay, okay, great, that's really great. And
+
+Speaker 1  22:58
+have you handled memory efficient, no data processing in Python, map, like, yeah, memory efficient. Like, like, yeah, process,
+
+Speaker 2  23:07
+yeah. So, like, if we talk about memory, like, can you give me any example, like, what? Or should I say, like, how,
+
+Speaker 1  23:18
+kind of different features, right? Okay, like, okay, okay, okay.
+
+Speaker 2  23:21
+Like, for this memory efficient Python, one some changes we can do is, like, we can use generator instead of list. This is because they store all elements in the memory while generators yet one at the item at a time, saving our memory so it will consume less memory, and like, generates item on demand without storing all them in the memory. Okay, in place of returning these large list, we should be using yield, okay, because yield returns one item at a time instead of keeping everything in the memory. Okay, then other is,
+
+Speaker 1  24:05
+yeah, good, right? So like, like, pandas checking memory, profiling and
+
+Speaker 2  24:09
+correct we can, we can use array instead of list for this numeric data, okay, NumPy array instead of list for large data set. If we are using we can use this, pandas, D type, to reduce our reduce memory, which is there. And
+
+Speaker 1  24:25
+have you heard about these things like shallow copy and deep copy? Yeah,
+
+Unknown Speaker  24:29
+correct. Yeah. Can
+
+Unknown Speaker  24:33
+you explain? Like, when do you use it?
+
+Speaker 2  24:36
+Okay, if we talk about the shallow copy and deep copy, so mainly shallow copy is like is done, like it creates a new object, but contained inside it are referenced to the original object element. Okay, so, like, if we modified a nested object, like list inside the. List, then it will affect both the copies. Okay, okay. But in the deep copy, what is it? It creates a completely independent objects, including all nested objects. So modification in the copied object do not affect our original object there, okay, and like if we talk about the memory users, then in shallow copy, it is less because it is only referencing deep copy, it is more okay if we talk about use case, so whenever a duplicate structure, but changes of nested objects should reflect in both copies, we use shallow copy. Whenever we need a totally a different, new object, we use a deep copy.
+
+Speaker 1  25:45
+Okay, okay, great, great, yeah. And
+
+Unknown Speaker  25:49
+you have heard about like decorators,
+
+Speaker 2  25:52
+correct decorators, yeah. So like decorators are mainly, decorators are mainly the functions that modifies the behavior of another function, okay, without changing its code. Like mainly decorators we use for this logging, authentications, then timings, then memorization or catching we can say, okay, so, like, decorator mainly wraps it with extra functionality, okay. Like, it's added behavior before and after calling that functions mainly, okay, okay.
+
+Unknown Speaker  26:36
+Like, what is method overriding in
+
+Speaker 2  26:41
+Python? Method overriding, yeah, overriding, yeah. Okay, so method overriding is a method overriding in Python is like, is like allow us subclass to provide a specific implementation of a method that is already already defined in its parent class. Okay, so mainly is enables polymorphin, where the subclass method overrides the parent method. Okay, okay. Like we can, if we talk about like, we can use super to call parent method here. Like inside this overwritten method, we can use super, okay, then method overriding we can do with the constructor, like using in it we can override the class it must call, like super.in it to initially our parent attributes, okay, okay,
+
+Speaker 1  27:46
+yeah, I think I'm good, yeah. Vikram, like, Do you have any questions for me?
+
+Speaker 2  27:50
+So, like, I need to understand what is the requirement. And, like, how, what kind of role this is, you are looking for? Mainly, yeah, this
+
+Speaker 1  27:58
+is kind of, you know, the where looking for, you know, who has a strong hands on experience on SQL, Python and BA and right, who can perform like, you know, like a senior data engineer kind of position to know one of the other prestigious client. Right kind of development, end to end of this kind of, you know, using these skills and APIs integration, API integration, with other skill sets, right,
+
+Unknown Speaker  28:37
+pure development role, looking
+
+Unknown Speaker  28:39
+for senior resource, who can you know,
+
+Speaker 1  28:42
+like, give, pull commitment to deal with the that interacting, interact with the client, and no deliverables, right? So that is a
+
+Speaker 2  28:55
+got, got any feedbacks for me, or any anything which I can improve matter.
+
+Speaker 1  29:02
+Definitely, you did a great differently. There is no doubt, right? So, yeah, like you have kind of, you know, very good exposure and all these areas. And, yeah, it's good that, yeah, so, yeah, so you're based out of, yeah, sorry, no, are you based out of which which city currently? Yeah, you're based out of which city. Are you in India? Are you? Is
+
+Unknown Speaker  29:31
+No, no, I'm in us only. Currently I'm
+
+Speaker 2  29:35
+okay. You're in use, right? Okay, yeah, currently I'm in Richmond for
+
+Unknown Speaker  29:39
+Richmond. Yeah. Yeah,
+
+Speaker 1  29:41
+okay, all right, all right, yeah, it was nice talking to you. Vikram, Yeah,
+
+Unknown Speaker  29:46
+same same year, same year.
+
+Speaker 1  29:48
+Thank you all the best. Thank you. Ramakrishna, thank you, thank you. Thank you. Thank you for your time. Thank you.
+
+Transcribed by https://otter.ai

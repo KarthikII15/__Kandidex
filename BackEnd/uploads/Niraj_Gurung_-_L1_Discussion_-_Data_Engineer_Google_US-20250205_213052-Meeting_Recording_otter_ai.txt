@@ -1,0 +1,214 @@
+Speaker 1  0:02  
+Hi, Neeraj Gurung and I have 12 plus years of experience into it in totality. Currently, I'm, you know, working with Tenet Healthcare, which is a New York based company, and my job role is basically a senior data engineer over here, right? I have been working along with AWS, as you know, my primary cloud providers, right? And I have been working, you know, into the data engineering domain past. You can say 10 plus years, 11 years, majorly on my on premises systems. I have worked on SQL, NoSQL, MongoDB, then HDFS, Oracle, flat files like, say, CSV, parquet, et cetera. I have also worked on the cloud platforms, AWS, primarily GCP as well. GCP had been, you know, one of my go to cloud partners for eight years, and it has been a great journey. So far, I have also worked on the BI tools like Power, bi Tableau, QuickSight, yeah, quick side, etc, I Looker for GCP as well. So this has been my overall adventurous journey. So far I have been associated you can see and hear me correctly, right? Yeah, yes, yes,
+
+Speaker 2  1:37  
+I can hear you Please, yeah. So, so pretty much you have a very good experience and all these areas. So that's really great, right? Okay, so on SQL, right? So how strong are you like? How can you rate yourself out of five? Yeah,
+
+Unknown Speaker  1:52  
+I am four.
+
+Speaker 2  1:58  
+Okay, okay, yeah, I will ask a couple of questions on that, yeah, please, right. So okay, let's like, we have two tables, right, like employee and orders table. That in employee tables employee ID, employee name and other details, right? And on the Orders table, right, we have order ID and employee ID. So now let's find out the employees who have not ordered
+
+Unknown Speaker  2:25  
+any anything, yeah. How can I do that?
+
+Speaker 1  2:28  
+Okay, so basically, in in SQL, you are asking, right? Yeah, okay, so you have, okay, let me think through EMPLOYEES table and you have orders table. Within employees, you have employee ID, employee name, whatever, and then within orders table you have the order ID and the employee ID you would want to see where employees who have not ordered anything, right? So you would want to, okay, so basically, what you do is you have employee ID in order, and you have employee ID in employees table, you join it together, right, maybe left, join, and then you say that, hey, where the order ID is null, like you are not able to find that order. So, yeah.
+
+Speaker 2  3:18  
+Oh, okay. And do you know the difference between NVL and NVL two. Sorry, yeah, null, null, NVL and NVL two, yeah,
+
+Speaker 1  3:27  
+okay, NVL and NVL two. So NVL like, then, then NVL and NVL two, right? So one is NVL is basically the null value logic like, like, if, like, I say that if the expression is null, right, it it returns something right. Like, if the expression is null, there is a returning value. If the expression is not null, it returns like, for example, like, if the salary of an employee is null, maybe I return a zero or say of that, say, say, saying that, Na, maybe a value to it, right? NVL two is basically an extension of of the NVL right over here. The the answer I can give is like, if the expression like, if the salary is null, okay, so in NVL I will say that, hey, if the salary is null, return, say zero. In NVL two, I will say that, if the salary is null, return, no value, or NA or something like that, so it returns some, some, you know, value to it, yeah, okay,
+
+Speaker 2  4:48  
+that's fine, okay? Like, on the Python said, how strong, like, how many experience you have,
+
+Unknown Speaker  4:57  
+eight and a half years of experience,
+
+Speaker 2  4:59  
+okay? Like. So how do you do, I know the performance optimization Python,
+
+Speaker 1  5:05  
+in Python, okay, yeah, so optimization in Python. So you mean that if my
+
+Speaker 2  5:11  
+memory usage, something like optimism, memory usage, how, how do you correct? Correct?
+
+Speaker 1  5:15  
+So I first of all like, if there is, I need to first understand the problem, right? So what I do is do a kind of, you can say code profiling, like I have to identify the bottlenecks, right? So within my Python, I have this sorry, C profile, right? So I can run through my C profile and I can see that where the bottleneck is, or make it maybe I can use, like, time it, and I can time out, right? I can see, set, see the timings of, you know, my execution pattern. Now, if I have to optimize, maybe if, if there is a function that is taking a lot longer, or if there is an unnecessary computation that is taking a lot longer. Maybe I can put them in in cash, right? So I can use, I can import LRU cash for it, right? And I can cash that I can optimize. I can optimize my loops, like, if I'm using any sort of, say, list comprehensions for faster. I can use list comprehension for, you know, faster for loops. I can use, say, filter. I can use map instead of, you know, directly looping around the data frame or the structure, right? So I have to be very, very specific towards, you know, using generators for, you know, memory efficiency. I can use generators for that as well, in case, like if my the data sources that I'm dealing with are high volume or need some sort of heavy computation, right? So maybe I can use any of like my example is, if I'm working along with larger data set, I can use like NumPy for that,
+
+Unknown Speaker  7:00  
+optimization techniques. Others, I can
+
+Speaker 1  7:05  
+multi processing, like if I have very CPU bound tasks, like if my tasks are consuming a lot of memory of the server. So I can use, say, IO based task or, etc. I can use the processing multi threading kind of thing. That's good, that's good, yeah. Like, how do you handle the file operations safely in Python? Like, file operations, yeah, so file operate basically first, you know, I have to, like, I have to connect to that particular file, right? So I always use, like, I always use a with statement with it, right? Like, I like apple with open, or whatever that say the text file is, or the CSV is. So I'll say with open the CSV, and then, you know, maybe R as a file, or whatever the content is, right? So I have to, you know, do the safe writing first, right? Also, if I'm handling files, I have to use, you know, exception handling in that like, I have to use, try and accept methods like, I need to avoid the crashing when the file is basically, you know, maybe it's being operational, or maybe it's sometimes the file is inaccessible, so it should not crash down. One is that I can use path libs as well as one of the, you know, safe handling techniques I can use, OS, dot, path dot exists. I can use, I can use path libs as well. So, you know, that's how, once the file is opened, like I have faced that, you know, we have to, you know, we have to avoid any sort of file corruptions. So I use a shuttle move like, whenever we are writing to a file, we always should be writing it down in an atomic way, like it should be using an atomic Right, right? So we I use that way. So how do you add an exceptions? Exceptions, as I said that basically I can use, try and accept method. You know, basically the best practice that we use is one of the ways is like, try accept method. I have separate blocks, try block, then the Accept block and so on, right? I I can also, you know, catch multiple kind of exception. Like, I can catch individual exceptions. I can catch all exceptions as well, right? I can use, I have used else and finally blocks as well, where, you know, I have, you know, written my script, like, try, except, then it is else, and then it is finally, right towards the finally printing that, hey, the exception. Is cached. Or
+
+Speaker 2  10:01  
+what is decoder? Decoder in Python, like, when, generally, you use the function, yeah.
+
+Unknown Speaker  10:07  
+So basically,
+
+Speaker 1  10:10  
+in terms of, like, would you want me to explain you a use case for that? Yes, it's simple use case like that. So basically, decoder, whenever I have to modify a function without, you know, changing its originality, okay, like, the basic decoder is, like, for example, I have, like, oh, wait, you asked me about a decoder on a decorator. Sorry, yeah, decorator, yes, yeah. Decorator, yeah. So, yeah. So I heard decorator but, and then I was like, decoder, okay, so the decorator is basically whenever you have a function, like, when I whenever you have to, you know, decorator is basically when you have to modify and another function without actually changing its originality. So that's what decorator is like. If I have say, I have a def my decorator function, then I say, F, wrapper, right? And then I say, say, funk. And then I return the wrapper and I write at the rate my whatever decorator is whatever name you have to write. And I say def, and then I call out, like say hello or print hello or whatever, right? So I have that I have at the rate decorator that I have to apply, yeah, okay, okay, that's fine, yeah. And I can have a decorator, honestly, I can have a decorator with arguments as well. Like, I can have like, within at the rate decorator. I say death. My name is so Neeraj or whatever. So I pass it value attribute to it so I can
+
+Speaker 2  11:56  
+print and like, have you work on this thing, context manager,
+
+Speaker 1  12:02  
+context manager, yes, so context manager is basically okay. So the use case over like they are primarily, you know, handling hand when you have to handle a lot of encoded as well as decoded data, right? So we have these context managers that I have used, like, if I have to do a File decoding, right? So I have, like, open with encoding and so on. So I have a context manager that I have applied to it as well, yeah. So maybe for even, you know, as you talked about while reading a file, or we talk, we discussed about the question, Where file is the thing, right? I have to open the file, read the file, so when I'm reading the file, you know, I can use, you know, context managers across it as well. Yeah.
+
+Unknown Speaker  12:53  
+Okay, okay, great, okay.
+
+Unknown Speaker  12:57  
+Like, what are the
+
+Speaker 2  12:59  
+visualization? Visualization RBI reporting to see how worked on it, apart from visualization,
+
+Unknown Speaker  13:04  
+right? So I have
+
+Speaker 1  13:07  
+BI reports. I have worked on quick site, I have worked on Tableau, I have worked on Power BI, I have worked on science. I have implemented micro strategy within quick site and Power BI as well. Okay, okay, okay.
+
+Unknown Speaker  13:26  
+Like, have you developed any dashboards?
+
+Speaker 1  13:28  
+Yes, yes. Honestly, I, if things go, you know, in a in a positive way, I would be more than happy to share with you a desk that I have prepared regarding the dashboard. So I have done, you know, slice dashboards as well. I have implemented where, you know, overall, if there is a line chart, the companies or maybe the use case owners, can see, you know, yearly data. When you click on any of the year, it dries down to say month on, if you click on any of the month you have say weeks, and if you click on any of the week you have date wise. So it's like sliced and diced data sets that I have worked on. I have worked on extensive pie chart, pie chart, bar chart, radar chart, line chart, computational charts, a custom pie charts, custom
+
+Unknown Speaker  14:22  
+I have worked on,
+
+Unknown Speaker  14:24  
+you know, custom built radar charts as well, you know,
+
+Speaker 1  14:28  
+with regards to, you know, censoring kind of data sets as well where, you know, on the graphs I have, like sensors, with regards to like, which it's Like a heat wave kind of charts that I have worked on as well. So have you worked on
+
+Unknown Speaker  14:45  
+this concept, like
+
+Speaker 2  14:46  
+PDT and persistent derived table, persistent
+
+Unknown Speaker  14:51  
+derived data sets? Yes, yes, yes. So Assistant,
+
+Speaker 2  14:57  
+like how this particular, you know. Feature is useful
+
+Unknown Speaker  15:00  
+in look at your voice is breaking. Is it
+
+Unknown Speaker  15:04  
+sorry? Can you hear me? Neeraj, is it better?
+
+Speaker 1  15:08  
+Just a second, sir. Let me change my network a bit. Okay, yeah, yeah. So I was asking you, what you know, this thing, the PD,
+
+Unknown Speaker  15:18  
+persistent derived table
+
+Speaker 1  15:22  
+like dt, okay, I thought that you are talking about persistent derived data sets, persistent derived tables. Yes, I have worked on right. The important, you know, the importance of where I would say, prefer using a persistent, derived table. Is like in, for example, in Looker, right? In Looker, we have a concept of having, you know, the look ml that we have, right? So we create, so is it okay that, if I talk about Looker in this context, yeah, sure. Look, look Emily, look ml, right? So basically, within my look ml, I have this YAML based structure, like I have a view, view, then I have a derived table, and then I can write down a kind of like SQL to it, right? So the persistent derived table, it will be like, for example, if I have to aggregate like sales data, right? So within my look ml itself, you know, I have a dimension, I have a measure, and then I have a, you know, SQL query that I have implemented within, you know, looker. So I have to that is a kind of, you know, persistent derived table where, you know, where I am aggregating. I'm creating a derived table and defining that derived table in look ml, and then I am, you know, materializing that table. So that is how the PDT works. Basically like creating a derived table is like I am writing a SQL query to retrieve the data from Table A, Table B, table C, table D, and I'm aggregating it together, and I'm defining that within the look ml saying that there is a parameter, there is a parameter derived, derived hyphen table, or derived underscore table. I
+
+Unknown Speaker  17:10  
+Okay, so what is
+
+Unknown Speaker  17:11  
+the main, main use, like, you know,
+
+Unknown Speaker  17:13  
+use of these, creating the pdts.
+
+Speaker 1  17:18  
+Basically, you know, pdts are, you know, they are very performant. Basically, when you are dealing with extensively large data sets in Looker, you don't need to, you can do aggregations to towards those data sets. And it's, it's like when you are dealing, you know, my data is really, I can say that since my data is pre computed, right? Or saved? Like it's that is this thing. It's very, very cost efficient as well. Like, I don't need to within, for example, in GCP BigQuery, I don't need to have a separate table which does the aggregation, stores the data. It's like a duplicate C, right? So I can, you know, have my own SQL query within Looker itself, and it's very cost efficient. Or cost efficient is very flexible. Why would you have to have data again and again while you have aggregated it together? Okay?
+
+Speaker 2  18:12  
+How do you handle data access and security lookup,
+
+Speaker 1  18:17  
+Data Access and Security like I can have my Iam being integrated, right? So basically, within my IAM, I have, you know, various groups where you know, you can be put to an admin group, you can be put to viewer group, you can be put to various groups. So there are roles and permissions that you can set so you have user roles, like you have admin role, you have a viewer role, you have an editor role. So within your roles, you can have that there are many other if you would want to go with date DAC, that is the data access control. You can have it at the at a model level as well, like you can have a role level security at the model level, where you are, you know, controlling the access that, who can access what. So you can have an access filter where you can apply a field, and then you can have an user attribute that, hey, this particular user group is allowed to access it. So you have the at the model level, then you have the data permissions at the view level as well. Then you have various user attributes, like you can have row level security. You can have personalized security as well. So, yeah,
+
+Unknown Speaker  19:31  
+yeah. I was expecting some kind of, you know, inputs, like
+
+Unknown Speaker  19:35  
+data filters, access grants. Okay,
+
+Unknown Speaker  19:37  
+okay, so sure, so
+
+Speaker 1  19:41  
+data filters. Access grants, if you would want to use you need to customize that, right? So basically, if you have to deal with, you know, access grants, right? So you okay access grant, like you have roles, permissions, you have data access, you have grants. Grants via user attributes. Like user attributes will serve as a role level security grants. And then you you have the access to the the dashboards or Looker or look ml, whatever you are dealing with. So that is one of the ways that you can have you can define a role, then you can have, you know, you can set a permission, and then you can explore the data on on top of those permissions,
+
+Unknown Speaker  20:21  
+okay. So how do you debug the
+
+Unknown Speaker  20:25  
+like, look around, look ml,
+
+Speaker 2  20:27  
+tools, right? So, like, what tools, what different kind of tools used to debug the so,
+
+Speaker 1  20:35  
+in, within look ml, you have a developer mode, right? So you know, you you select a developer mode, and within the developer mode, like there are two modes of it, like you are either in the developer mode or you are in the production mode, right? So we have, as a, you know, you can go to the developer role and be in the developer mode. Then you can have, once you are in the developer mode, you have a look ml validator, right? So you use that. Look ml validator, therefore, which checks any of your syntax errors, or maybe if there are any sort of incorrect references that you have made, right? So look ml validator is another you can use. I have used test with explorers as well, right? So with an explorer once, once I open an explorer, I select, you know, the model, which I'm referring to, then I ensure like I can, I can run through, you know, the test function as well, which runs through the missing field, the data types. Maybe, yeah, it executes the query performance as well. So that's how you use. I use, I have used SQL runner as well. One of the debugging tool where I have, you know, my SQL runner to execute whatever you know, PGT is that the SQL query that I have implemented, I have also enabled debugging, debug login, like I go to as a local admin, I go to the logs, and then I go to the system, and then I select whatever you know, query execution. Look ml processing I would want to go so that is, like, how I debug and how I log if there is an issue, so there is a log file that generates out of it. So, yeah,
+
+Speaker 2  22:12  
+okay. Like, have you worked on, like, see, look at APIs.
+
+Speaker 1  22:19  
+Look at eyes. So do you want? Are you looking an answer in terms of,
+
+Unknown Speaker  22:26  
+how do you integrate like Looker APIs? So
+
+Speaker 1  22:29  
+I have used REST APIs, right, where, you know, from the looker SDK, like I have set up the OAuth authentication, right? Whosoever logs in, and then, you know, we the query is already created, we execute the query, and then we retrieve the result. That's one like, it's a very, fairly easy and simple approach. But then on top of it, within my look ml, I have this, you know, error catching mechanism, like, for example, if my API is returning error 500 or something unreachable, unresponsive errors, how do I tackle it? So that's, that's how I have implemented the use case. Yeah, okay, okay, I have to set up the endpoints, basically, like I have to set up the get POST and GET queries and all that. Yeah. When
+
+Speaker 2  23:20  
+it comes to deployment and virtual controlling, how do you handle that situations,
+
+Unknown Speaker  23:25  
+for for local dashboards or
+
+Speaker 1  23:30  
+so basically on in terms of deployment, right? So the process that we have followed, like, as I said, like within the developer mode I have, we have done the Git integration, so within the deployment workflow that as a developer mode I have so we within the development once the developer mode is on, the developer makes the changes, then they commit the changes, the compare the changes that have been commit within the Git repository. I have my organization. Within the organization, I have a folder structure that where you would want to commit using Looker API. What we have done is we have done the review and testing strategy as well where our leaders, like who said is lead of a developer, would review within the Explore section, you can, you know, connect to that API the review once the changes are made, we can, you know, always deploy to production. So look at on the looker admin interface. We have the CICD where the production changes are deployed. Once the changes are deployed to production, it cannot be, you know, edited as such, like one cannot change the look ml, etc. So it's like Looker and integration with the Git version control that we have done. Okay,
+
+Unknown Speaker  24:43  
+okay, great, yeah.
+
+Speaker 2  24:46  
+So, yeah, I'm done, yeah. So, yeah, thanks for your time. You do have any specific question,
+
+Speaker 1  24:53  
+I hope I was able to, you know, match up to what you are expecting for this. Role and position. What exactly you are looking for. Is it just a bi developer, or basically, who understands the end to end ETL ELT in data engineering along with bi?
+
+Speaker 2  25:13  
+Yeah, it should be like, kind of a end to end role, right? So the like, okay, can work as a data engineer to integrate with any kind of you know source data ingestion, right? So able to create the like a multiple complex transformations, right, converting the codes and building the dashboards and creating the models with the like DC environment.
+
+Unknown Speaker  25:38  
+Right, like, right, simply
+
+Speaker 1  25:40  
+on GCP, I have extensively worked on the GCS, which, within the medallion architecture, we have implemented GCS where the files reside, like the files are extracted and then they are thrown to GCS. On GCS, when the file resides, there is a PubSub topic, and then the airflow tags that run through that put the data into the BigQuery. Within BigQuery, we have, you know, the billing project, the data project, and the data sets and whatever tables that we have, and those final data warehousing tables are further being utilized by looker. So that has been my architecture that I have implemented.
+
+Speaker 2  26:17  
+Okay, have you worked on this thing? Have you heard about the lake house, yes,
+
+Speaker 1  26:21  
+I have worked on the lake house architecture as well. I think five years back, yeah, okay, okay, great, yeah. I hope I was able to match up to your expectations, and I look forward for the feedback.
+
+Unknown Speaker  26:36  
+Really helpful for me. Yeah,
+
+Unknown Speaker  26:38  
+thank you. Thank you. Bye. Bye.
+
+Transcribed by https://otter.ai

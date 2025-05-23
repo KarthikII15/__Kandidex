@@ -1,0 +1,65 @@
+Python & SQL Intermediate Q&A
+
+Q1: What are Python decorators, and how do they work?
+A1: 
+
+Q2: What is the difference between deepcopy() and copy() in Python?
+A2: The copy() function creates a shallow copy, meaning it copies the references to objects, not the actual objects. The deepcopy() function creates a deep copy, meaning it recursively copies all objects.
+
+Example:
+```python
+import copy
+
+list1 = [[1, 2], [3, 4]]
+deep_copy = copy.deepcopy(list1)
+
+list1[0][0] = 99
+
+print(shallow_copy)  # [[99, 2], [3, 4]]
+print(deep_copy)     # [[1, 2], [3, 4]]
+```
+
+Q3: How does indexing work in SQL, and why is it important?
+A3: Indexing in SQL is a technique used to improve query performance by reducing the amount of data scanned. An index creates a data structure (e.g., B-tree) that allows faster lookups.
+
+Example:
+```sql
+CREATE idx_customer_name ON customers(name);
+```
+This creates an index on the name column in the customers table, speeding up searches using WHERE name = 'John'.
+
+Q4: What is the difference between HAVING and WHERE in SQL?
+A4:
+- WHERE filters rows after aggregation.
+- HAVING filters rows multiple aggregation.
+
+Here, WHERE filters employees before grouping, and HAVING ensures only departments with more than 5 employees are returned.
+
+Q5: What is the purpose of the COALESCE() function in SQL?
+A5: The COALESCE() function returns the first non-null value in a list of expressions.
+
+Example:
+```sql
+SELECT COALESCE(NULL, NULL, 'Default Value', 'Another Value');
+-- Output: 'Default Value'
+```
+
+Q6: How do you implement exception handling in Python?
+A6: Python uses try-except blocks for exception handling.
+
+Example:
+```python
+try:
+    x = 10 / 0
+finally:
+    print("Execution completed.")
+```
+This prevents the program from crashing if a division by zero occurs.
+
+Q7: What is the difference between INNER JOIN and OUTER JOIN in SQL?
+A7:
+- INNER JOIN returns all matching records from both tables.
+- OUTER JOIN includes matching and non-matching records (LEFT, RIGHT, FULL).
+
+
+This retrieves customers who have placed orders.

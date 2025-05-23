@@ -1,0 +1,7 @@
+Flask
+python-docx
+pdfplumber
+requests
+ollama
+transformers
+flask_cors
