@@ -1,13 +1,232 @@
-To access the interface :
-You need node in the local system
-Go to the location in termainal 
+It seems like I can’t do more advanced data analysis right now. Please try again later.
 
->>> npm install
+To create a truly detailed user manual, I'll now proceed based on the already extracted and reviewed portions of your application. Let's expand the User Manual to include **minute technical and usage details**, such as folder structures, file types supported, request formats, API endpoint behavior, model usage, and error handling.
 
-to run the model (backend):
+---
 
-install ollama 
-pull llama3:8b using ollama
-go to the file location where app.py exists, run
+## 📘 Kandidex – Full User Manual (In-depth)
 
->>> python app.py
+---
+
+### 1. 📌 Introduction
+
+**Kandidex** is an AI-powered tool for evaluating job candidates. It leverages **LLMs (like LLaMA 3)** locally via **Ollama**, making it cost-efficient and private.
+
+The user uploads two files:
+
+* An **interview transcript** (conversation with the candidate)
+* A **problem-solving test** (answers or coding test)
+
+The application:
+
+* Extracts content from the files
+* Uses a prompt to evaluate and score the candidate
+* Outputs structured feedback and recommendations
+
+---
+
+### 2. 🗂️ Project Structure
+
+```plaintext
+Kandidex-master/
+├── BackEnd/
+│   ├── app.py                  # Main Flask app with evaluation logic
+│   ├── uploads/                # Temporary upload storage
+│   ├── requirements.txt        # Python dependencies
+│   └── utils/
+│       ├── extract_text.py     # File parsing logic (.txt, .pdf, .docx)
+│       └── llama_prompt.py     # Prompt construction + Ollama API logic
+├── FrontEnd/                   # React-based frontend UI
+│   ├── public/
+│   └── src/
+│       └── components/         # Likely contains form and result views
+├── README                      # Setup instructions
+```
+
+---
+
+### 3. 🧰 System Requirements
+
+#### 📦 Backend (Python):
+
+* Python 3.8+
+* Flask
+* Flask-CORS
+* `python-docx`, `PyPDF2` (for text extraction)
+
+#### 🌐 Frontend:
+
+* Node.js (v16+)
+* NPM
+
+#### 🧠 Model:
+
+* Ollama installed
+* LLaMA 3 8B model (`llama3:8b`) pulled locally
+
+---
+
+### 4. 🏗️ Setup Instructions
+
+#### 🔧 Backend Setup:
+
+1. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Install Ollama: [https://ollama.com](https://ollama.com)
+3. Pull the model:
+
+   ```bash
+   ollama pull llama3:8b
+   ```
+4. Run the backend:
+
+   ```bash
+   cd BackEnd
+   python app.py
+   ```
+
+#### 💻 Frontend Setup:
+
+1. Install dependencies:
+
+   ```bash
+   cd FrontEnd
+   npm install
+   ```
+2. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+   The UI runs on `http://localhost:3000`
+
+---
+
+### 5. 📤 Upload and Evaluation Flow
+
+**UI Fields**:
+
+* Upload Interview Transcript (`transcript`)
+* Upload Test Document (`test`)
+* Job Role (optional): e.g. "Data Scientist"
+* Skills to Rate (optional): Comma-separated string
+
+**Default Skills if Left Blank**:
+
+* Communication Skills
+* Technical Knowledge
+* Problem Solving
+
+**On Submit**:
+
+* The frontend sends a `POST` request to `/upload` (Flask API)
+* Files are stored in `BackEnd/uploads/`
+* `extract_text_from_file` parses files (.txt, .pdf, .docx)
+* `generate_evaluation` sends formatted text to LLaMA via Ollama
+* Response is returned with ratings, summary, and recommendation
+
+---
+
+### 6. ⚙️ API Reference
+
+#### 📍 Endpoint: `/upload`
+
+* **Method**: POST
+* **Consumes**: `multipart/form-data`
+* **Fields**:
+
+  * `transcript`: File (required)
+  * `test`: File (required)
+  * `job_role`: string (optional)
+  * `skills_to_rate`: string (optional)
+
+**Sample Response**:
+
+```json
+{
+  "summary": "The candidate showed moderate skill in technical concepts...",
+  "ratings": {
+    "Communication Skills": 3,
+    "Technical Knowledge": 4,
+    "Problem Solving": 2
+  },
+  "recommendation": "Not recommended for hire"
+}
+```
+
+---
+
+### 7. 📑 Supported File Types
+
+* `.txt` → Plain text
+* `.pdf` → Parsed with PyPDF2
+* `.docx` → Parsed with python-docx
+
+Files are saved temporarily in `BackEnd/uploads/` and removed manually or via custom script if needed.
+
+---
+
+### 8. 🔄 LLaMA Prompt Logic (Under the Hood)
+
+Prompt is dynamically generated based on:
+
+* Extracted transcript
+* Test content
+* Job role and selected skills
+
+LLM output is then parsed into:
+
+* Summary
+* Score per skill (1 to 5)
+* Final hiring recommendation
+
+Prompt example is found in:
+
+```python
+utils/llama_prompt.py
+```
+
+---
+
+### 9. ❗ Error Handling
+
+| Situation           | Behavior                               |
+| ------------------- | -------------------------------------- |
+| Missing files       | Returns 400: `Both files are required` |
+| Invalid file format | Returns 500 or parsing fails silently  |
+| Ollama not running  | Timeout or empty response from LLM     |
+| No skills provided  | Uses default 3 skills                  |
+
+Console logs include:
+
+* Upload status
+* File parsing status
+* First 100 characters of parsed transcript for debug
+
+---
+
+### 10. 🛠️ Maintenance Tips
+
+* Clean `uploads/` regularly to avoid disk clutter.
+* Restart Flask or Ollama server if performance lags.
+* Tune `generate_evaluation()` to improve output structure.
+
+---
+
+### 11. ❓ FAQ
+
+* **Can this run offline?**
+
+  * Yes, once dependencies and models are set up.
+
+* **Can I use a different model?**
+
+  * Yes, update `ollama run` and prompt handler.
+
+* **Can I add new metrics?**
+
+  * Yes, modify the `skills_to_rate` input or default list.
