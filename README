@@ -211,17 +211,3 @@ Console logs include:
 * Tune `generate_evaluation()` to improve output structure.
 
 ---
-
-### 11. ❓ FAQ
-
-* **Can this run offline?**
-
-  * Yes, once dependencies and models are set up.
-
-* **Can I use a different model?**
-
-  * Yes, update `ollama run` and prompt handler.
-
-* **Can I add new metrics?**
-
-  * Yes, modify the `skills_to_rate` input or default list.
