@@ -18,6 +18,8 @@ The application:
 * Uses a prompt to evaluate and score the candidate
 * Outputs structured feedback and recommendations
 
+ ⚠️ Caution: The AI-generated evaluation is intended to assist decision-making but should not be treated as the final hiring verdict. Human review is essential before taking any action.
+
 ---
 
 ### 2. 🗂️ Project Structure
@@ -99,8 +101,6 @@ Kandidex-master/
 
    The UI runs on `http://localhost:3000`
 
-![alt text](image.png)
-
 ---
 
 ### 5. 📤 Upload and Evaluation Flow
@@ -154,10 +154,72 @@ Kandidex-master/
   "recommendation": "Not recommended for hire"
 }
 ```
+### 7. Output Evaluation Guide 
+This section helps interpret the generated evaluation output. Kandidex uses a structured prompt to elicit specific feedback from the LLaMA 3 model, formatted as:
 
+✅ Candidate Name
+
+📝 Evaluation Summary
+
+⭐ Skill Ratings
+
+✅ Recommendation
+
+📧 Email Draft for HR
+
+### 7.1 🧠 Evaluation Summary
+This section captures the narrative understanding of the candidate’s strengths and weaknesses derived from the transcript and test answers.
+
+Interpreting It:
+
+Look for:
+
+Technical insights mentioned
+
+Soft skill behavior (e.g., clarity, adaptability)
+
+Mention of specific project experiences or responses
+
+Helps gauge depth vs breadth of understanding
+
+Usually begins with:
+
+“The candidate demonstrated a strong understanding of …”
+
+### 7.2 ⭐ Skill Ratings
+This is a quantified view of performance across specified (or default) skill areas. Output looks like:
+
+Skill Ratings:
+Communication Skills: 4/5
+Technical Knowledge: 3/5
+Problem Solving: 5/5
+Teamwork: 2/5
+⭐ Rating Scale:
+Rating	Meaning
+5/5	Exceptional — industry expert level
+4/5	Strong — well above average
+3/5	Average — meets expectations
+2/5	Below average — needs improvement
+1/5	Poor — lacks fundamental ability
+N/A	Skill not clearly addressed in content
+
+💡 Tip: Skills marked low (1 or 2) in core job areas should be red flags.
+
+### 7.3 ✅ Recommendation
+This is the final suggestion by the AI model, derived from the full prompt context.
+
+It will be one of the following (or similar):
+
+Hire — Candidate is suitable for the role
+
+Consider with Caution — Mixed performance, may depend on team or training
+
+Do Not Hire — Major skill or behavioral gaps detected
+
+### "⚠ Even if a transcript includes “Hire” — manually confirm it aligns with company hiring standards."
 ---
 
-### 7. 📑 Supported File Types
+### 8. 📑 Supported File Types
 
 * `.txt` → Plain text
 * `.pdf` → Parsed with PyPDF2
@@ -167,7 +229,7 @@ Files are saved temporarily in `BackEnd/uploads/` and removed manually or via cu
 
 ---
 
-### 8. 🔄 LLaMA Prompt Logic (Under the Hood)
+### 9. 🔄 LLaMA Prompt Logic (Under the Hood)
 
 Prompt is dynamically generated based on:
 
@@ -189,7 +251,7 @@ utils/llama_prompt.py
 
 ---
 
-### 9. ❗ Error Handling
+### 10. ❗ Error Handling
 
 | Situation           | Behavior                               |
 | ------------------- | -------------------------------------- |
@@ -204,9 +266,10 @@ Console logs include:
 * File parsing status
 * First 100 characters of parsed transcript for debug
 
+⚠️ “AI results may vary based on transcript/test quality — manual validation is recommended.”
 ---
 
-### 10. 🛠️ Maintenance Tips
+### 11. 🛠️ Maintenance Tips
 
 * Clean `uploads/` regularly to avoid disk clutter.
 * Restart Flask or Ollama server if performance lags.
